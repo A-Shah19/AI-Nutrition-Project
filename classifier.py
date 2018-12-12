@@ -8,10 +8,8 @@ from keras.utils.np_utils import to_categorical
 
 
 def calculate_steps(filenames, batch_size):
-  filenames_len = len(filenames)
-  val = filenames_len / batch_size
-  val_add = int(val) + 1
-  return val_add
+	return int(math.ceil(len(filenames)/batch_size))
+
 
 train_dir = 'data/train'
 validation_dir = 'data/validation'
