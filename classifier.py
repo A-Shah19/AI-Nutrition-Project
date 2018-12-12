@@ -26,7 +26,7 @@ validation_categorical_classes = to_categorical(val_generator.classes, num_class
 vgg_model = applications.VGG16(include_top=False, weights='imagenet')
 
 train_features_steps = calculate_steps(part1_train_generator.filenames, 32)
-validation_features_steps = calculate_steps(val_train_generator.filenames, 32)
+validation_features_steps = calculate_steps(val_generator.filenames, 32)
 
 train_features = vgg_model.predict_generator(part1_train_generator, train_features_steps, verbose=1)
 
