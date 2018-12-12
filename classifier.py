@@ -32,7 +32,7 @@ train_features = vgg_model.predict_generator(part1_train_generator, train_featur
 
 validation_features = vgg_model.predict_generator(val_generator, validation_features_steps, verbose=1)
 
-train_features_shape = train_features_shape
+train_features_shape = train_features.shape
 train_input_shape = train_features_shape[1:]
 
 model = Sequential()
