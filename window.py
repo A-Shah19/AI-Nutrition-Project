@@ -3,7 +3,7 @@ from tkinter import filedialog
 from tkinter import messagebox
 from PIL import ImageTk,Image
 import tkinter as tk
-import predictv2
+import predict
 import nutrition_facts
 import numpy as np
 # Here, we are creating our class, Window, and inheriting from the Frame
@@ -105,7 +105,7 @@ class Window(Frame):
         TODO:// When this function is called, we want to be able to show the food photos here
         """
         global PATHS
-        results = predictv2.predict_classes(PATHS)
+        results = predict.predict_classes(PATHS)
         total_diet = np.zeros((6))
         suggested_diet = np.array(food_facts['suggested'])
         x_c = 60
